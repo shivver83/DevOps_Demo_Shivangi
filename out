@@ -1,0 +1,143 @@
+[
+    {
+        "Id": "sha256:b98f71bbd94628963ddf60bd04b31826a5d38d48d3089b6b6199cb47566480fb",
+        "RepoTags": [
+            "devopsarea:latest"
+        ],
+        "RepoDigests": [],
+        "Parent": "sha256:61b6a365d3a311f836dd60d76359535d9293aa2dbd6d2e4058d7dc7e2e5f7c91",
+        "Comment": "",
+        "Created": "2020-01-25T00:50:53.840682335Z",
+        "Container": "dbcd3391b86a385ddeab2ebf098ef9635aac1f189de1e27c3a3df5488fa62a7c",
+        "ContainerConfig": {
+            "Hostname": "dbcd3391b86a",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "ExposedPorts": {
+                "8080/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "PATH=/usr/local/tomcat/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/lib/jvm/java-1.8-openjdk/jre/bin:/usr/lib/jvm/java-1.8-openjdk/bin",
+                "LANG=C.UTF-8",
+                "JAVA_HOME=/usr/lib/jvm/java-1.8-openjdk/jre",
+                "JAVA_VERSION=8u212",
+                "JAVA_ALPINE_VERSION=8.212.04-r0",
+                "CATALINA_HOME=/usr/local/tomcat",
+                "TOMCAT_NATIVE_LIBDIR=/usr/local/tomcat/native-jni-lib",
+                "LD_LIBRARY_PATH=/usr/local/tomcat/native-jni-lib",
+                "GPG_KEYS=05AB33110949707C93A279E3D3EFE6B686867BA6 07E48665A34DCAFAE522E5E6266191C37C037D42 47309207D818FFD8DCD3F83F1931D684307A10A5 541FBE7D8F78B25E055DDEE13C370389288584E7 61B832AC2F1C5A90F0F9B00A1C506407564C17A3 79F7026C690BAA50B92CD8B66A3AD3F4F22C4FED 9BA44C2621385CB966EBA586F72C284D731FABEE A27677289986DB50844682F8ACB77FC2E86E29AC A9C5DF4D22E99998D9875A5110C01C5A2F6059E7 DCFD35E0BF8CA7344752DE8B6FB21E8933C60243 F3A04C595DB5B6A5F1ECA43E3B7BBB100D811BBE F7DA48BB64BCB84ECBA7EE6935CD23C10D498E23",
+                "TOMCAT_MAJOR=9",
+                "TOMCAT_VERSION=9.0.20",
+                "TOMCAT_SHA512=6d2df51f0bfc6a90cfca61c86473b8843da4162c430ab06b8f66f364931f3d8a3ad399703acdd600ff4f633d7d6725edf05d5d5d19534716a2f3f9f5238a32a0",
+                "TOMCAT_TGZ_URLS=https://www.apache.org/dyn/closer.cgi?action=download&filename=tomcat/tomcat-9/v9.0.20/bin/apache-tomcat-9.0.20.tar.gz \thttps://www-us.apache.org/dist/tomcat/tomcat-9/v9.0.20/bin/apache-tomcat-9.0.20.tar.gz \thttps://www.apache.org/dist/tomcat/tomcat-9/v9.0.20/bin/apache-tomcat-9.0.20.tar.gz \thttps://archive.apache.org/dist/tomcat/tomcat-9/v9.0.20/bin/apache-tomcat-9.0.20.tar.gz",
+                "TOMCAT_ASC_URLS=https://www.apache.org/dyn/closer.cgi?action=download&filename=tomcat/tomcat-9/v9.0.20/bin/apache-tomcat-9.0.20.tar.gz.asc \thttps://www-us.apache.org/dist/tomcat/tomcat-9/v9.0.20/bin/apache-tomcat-9.0.20.tar.gz.asc \thttps://www.apache.org/dist/tomcat/tomcat-9/v9.0.20/bin/apache-tomcat-9.0.20.tar.gz.asc \thttps://archive.apache.org/dist/tomcat/tomcat-9/v9.0.20/bin/apache-tomcat-9.0.20.tar.gz.asc"
+            ],
+            "Cmd": [
+                "/bin/sh",
+                "-c",
+                "#(nop) ",
+                "HEALTHCHECK &{[\"CMD-SHELL\" \"wget --quiet --tries=1 --spider http://localhost:8080/wizard/ || exit 1\"] \"1m0s\" \"3s\" \"0s\" '\\x00'}"
+            ],
+            "Healthcheck": {
+                "Test": [
+                    "CMD-SHELL",
+                    "wget --quiet --tries=1 --spider http://localhost:8080/wizard/ || exit 1"
+                ],
+                "Interval": 60000000000,
+                "Timeout": 3000000000
+            },
+            "ArgsEscaped": true,
+            "Image": "sha256:61b6a365d3a311f836dd60d76359535d9293aa2dbd6d2e4058d7dc7e2e5f7c91",
+            "Volumes": null,
+            "WorkingDir": "/usr/local/tomcat",
+            "Entrypoint": null,
+            "OnBuild": null,
+            "Labels": {}
+        },
+        "DockerVersion": "19.03.5",
+        "Author": "",
+        "Config": {
+            "Hostname": "",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "ExposedPorts": {
+                "8080/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "PATH=/usr/local/tomcat/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/lib/jvm/java-1.8-openjdk/jre/bin:/usr/lib/jvm/java-1.8-openjdk/bin",
+                "LANG=C.UTF-8",
+                "JAVA_HOME=/usr/lib/jvm/java-1.8-openjdk/jre",
+                "JAVA_VERSION=8u212",
+                "JAVA_ALPINE_VERSION=8.212.04-r0",
+                "CATALINA_HOME=/usr/local/tomcat",
+                "TOMCAT_NATIVE_LIBDIR=/usr/local/tomcat/native-jni-lib",
+                "LD_LIBRARY_PATH=/usr/local/tomcat/native-jni-lib",
+                "GPG_KEYS=05AB33110949707C93A279E3D3EFE6B686867BA6 07E48665A34DCAFAE522E5E6266191C37C037D42 47309207D818FFD8DCD3F83F1931D684307A10A5 541FBE7D8F78B25E055DDEE13C370389288584E7 61B832AC2F1C5A90F0F9B00A1C506407564C17A3 79F7026C690BAA50B92CD8B66A3AD3F4F22C4FED 9BA44C2621385CB966EBA586F72C284D731FABEE A27677289986DB50844682F8ACB77FC2E86E29AC A9C5DF4D22E99998D9875A5110C01C5A2F6059E7 DCFD35E0BF8CA7344752DE8B6FB21E8933C60243 F3A04C595DB5B6A5F1ECA43E3B7BBB100D811BBE F7DA48BB64BCB84ECBA7EE6935CD23C10D498E23",
+                "TOMCAT_MAJOR=9",
+                "TOMCAT_VERSION=9.0.20",
+                "TOMCAT_SHA512=6d2df51f0bfc6a90cfca61c86473b8843da4162c430ab06b8f66f364931f3d8a3ad399703acdd600ff4f633d7d6725edf05d5d5d19534716a2f3f9f5238a32a0",
+                "TOMCAT_TGZ_URLS=https://www.apache.org/dyn/closer.cgi?action=download&filename=tomcat/tomcat-9/v9.0.20/bin/apache-tomcat-9.0.20.tar.gz \thttps://www-us.apache.org/dist/tomcat/tomcat-9/v9.0.20/bin/apache-tomcat-9.0.20.tar.gz \thttps://www.apache.org/dist/tomcat/tomcat-9/v9.0.20/bin/apache-tomcat-9.0.20.tar.gz \thttps://archive.apache.org/dist/tomcat/tomcat-9/v9.0.20/bin/apache-tomcat-9.0.20.tar.gz",
+                "TOMCAT_ASC_URLS=https://www.apache.org/dyn/closer.cgi?action=download&filename=tomcat/tomcat-9/v9.0.20/bin/apache-tomcat-9.0.20.tar.gz.asc \thttps://www-us.apache.org/dist/tomcat/tomcat-9/v9.0.20/bin/apache-tomcat-9.0.20.tar.gz.asc \thttps://www.apache.org/dist/tomcat/tomcat-9/v9.0.20/bin/apache-tomcat-9.0.20.tar.gz.asc \thttps://archive.apache.org/dist/tomcat/tomcat-9/v9.0.20/bin/apache-tomcat-9.0.20.tar.gz.asc"
+            ],
+            "Cmd": [
+                "catalina.sh",
+                "run"
+            ],
+            "Healthcheck": {
+                "Test": [
+                    "CMD-SHELL",
+                    "wget --quiet --tries=1 --spider http://localhost:8080/wizard/ || exit 1"
+                ],
+                "Interval": 60000000000,
+                "Timeout": 3000000000
+            },
+            "ArgsEscaped": true,
+            "Image": "sha256:61b6a365d3a311f836dd60d76359535d9293aa2dbd6d2e4058d7dc7e2e5f7c91",
+            "Volumes": null,
+            "WorkingDir": "/usr/local/tomcat",
+            "Entrypoint": null,
+            "OnBuild": null,
+            "Labels": null
+        },
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 110596483,
+        "VirtualSize": 110596483,
+        "GraphDriver": {
+            "Data": {
+                "LowerDir": "/var/lib/docker/overlay2/681e220dc99418970b007b68cb3e21d65f64e82e99b5c3b35d66de9542ae0974/diff:/var/lib/docker/overlay2/96be699b6ee699ab251913c85801ce80f8f04644649298b6cc26613645fe6d5b/diff:/var/lib/docker/overlay2/42f22bc8582a8225555bda6d75355ef51e2550f90a621b60a5883bcd4f33c3eb/diff:/var/lib/docker/overlay2/c2ecc6d863a527c37de7f73205e8e1016143a44d977a9d5c79a6ad7555f56d84/diff:/var/lib/docker/overlay2/1ae96b0bc8569cc391f2be252b1dfe02da5e8bdd756dab551e15d19fc3780c4b/diff:/var/lib/docker/overlay2/b74e4b10c24b8d17305b3648c4e967b289884eb5de8045833eec47bc0d8fae45/diff",
+                "MergedDir": "/var/lib/docker/overlay2/4b63d024bb8dba105b5b9567ab7c1a111962f50a6e725f147ad2fe6829ee62f4/merged",
+                "UpperDir": "/var/lib/docker/overlay2/4b63d024bb8dba105b5b9567ab7c1a111962f50a6e725f147ad2fe6829ee62f4/diff",
+                "WorkDir": "/var/lib/docker/overlay2/4b63d024bb8dba105b5b9567ab7c1a111962f50a6e725f147ad2fe6829ee62f4/work"
+            },
+            "Name": "overlay2"
+        },
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:f1b5933fe4b5f49bbe8258745cf396afe07e625bdab3168e364daf7c956b6b81",
+                "sha256:9b9b7f3d56a01e3d9076874990c62e7a516cc4032f784f421574d06b18ef9aa4",
+                "sha256:edd61588d12669e2d71a0de2aab96add3304bf565730e1e6144ec3c3fac339e4",
+                "sha256:48988bb7b8615c1af859b04776a46ddeb4d2bd1aa9b0a9a3ac099cf3f73ab29d",
+                "sha256:d1d0b1719b963394ea25c3936f2d67f8bdb6c90bd7166137167c7b7f135742e1",
+                "sha256:b7d850202de0030b2e8e076a40364bb695c891339ba321e6a743e9db0cc72766",
+                "sha256:5eb614cc4a2c79521657a24ef6546b48fc61266694622c2f3a2910921848a495"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "2020-01-25T00:50:53.98094742Z"
+        }
+    }
+]
