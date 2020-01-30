@@ -4,15 +4,34 @@
   "location": null,
   "name": "template",
   "properties": {
-    "correlationId": "2ac3493c-dc1f-4807-82b7-8556e75e1e3e",
+    "correlationId": "44424ebc-62d4-4406-b849-f8ea650c1a35",
     "debugSetting": null,
-    "dependencies": [],
-    "duration": "PT21.6856803S",
+    "dependencies": [
+      {
+        "dependsOn": [
+          {
+            "id": "/subscriptions/1d87de0e-3b71-4fc5-b14f-d7076ad719f3/resourceGroups/helm/providers/Microsoft.Storage/storageAccounts/wneocroyar4m4storage",
+            "resourceGroup": "helm",
+            "resourceName": "wneocroyar4m4storage",
+            "resourceType": "Microsoft.Storage/storageAccounts"
+          }
+        ],
+        "id": "/subscriptions/1d87de0e-3b71-4fc5-b14f-d7076ad719f3/resourceGroups/helm/providers/Microsoft.Storage/storageAccounts/wneocroyar4m4storage/blobServices/default/containers/logs",
+        "resourceGroup": "helm",
+        "resourceName": "wneocroyar4m4storage/default/logs",
+        "resourceType": "Microsoft.Storage/storageAccounts/blobServices/containers"
+      }
+    ],
+    "duration": "PT18.4017827S",
     "mode": "Incremental",
     "onErrorDeployment": null,
     "outputResources": [
       {
         "id": "/subscriptions/1d87de0e-3b71-4fc5-b14f-d7076ad719f3/resourceGroups/helm/providers/Microsoft.Storage/storageAccounts/wneocroyar4m4storage",
+        "resourceGroup": "helm"
+      },
+      {
+        "id": "/subscriptions/1d87de0e-3b71-4fc5-b14f-d7076ad719f3/resourceGroups/helm/providers/Microsoft.Storage/storageAccounts/wneocroyar4m4storage/blobServices/default/containers/logs",
         "resourceGroup": "helm"
       }
     ],
@@ -25,6 +44,10 @@
       "accountType": {
         "type": "String",
         "value": "Standard_LRS"
+      },
+      "containerName": {
+        "type": "String",
+        "value": "logs"
       },
       "kind": {
         "type": "String",
@@ -56,15 +79,25 @@
             ],
             "properties": null,
             "resourceType": "storageAccounts"
+          },
+          {
+            "aliases": null,
+            "apiVersions": null,
+            "capabilities": null,
+            "locations": [
+              null
+            ],
+            "properties": null,
+            "resourceType": "storageAccounts/blobServices/containers"
           }
         ]
       }
     ],
     "provisioningState": "Succeeded",
     "template": null,
-    "templateHash": "14194993164762120570",
+    "templateHash": "2998734032676215642",
     "templateLink": null,
-    "timestamp": "2020-01-30T03:32:09.163531+00:00"
+    "timestamp": "2020-01-30T06:00:58.970471+00:00"
   },
   "resourceGroup": "helm",
   "type": "Microsoft.Resources/deployments"

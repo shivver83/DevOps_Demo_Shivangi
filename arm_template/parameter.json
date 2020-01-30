@@ -16,6 +16,9 @@
         },
         "supportsHttpsTrafficOnly": {
             "value": true
+        },
+         "containerName": {
+            "value": "logs"
         }
     }
 }
