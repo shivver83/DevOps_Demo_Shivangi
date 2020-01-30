@@ -1,0 +1,73 @@
+[root@helm arm_template]# az group deployment create -g helm --template-file template.json --parameters parameter.json
+{
+  "id": "/subscriptions/1d87de0e-3b71-4fc5-b14f-d7076ad719f3/resourceGroups/helm/providers/Microsoft.Resources/deployments/template",
+  "location": null,
+  "name": "template",
+  "properties": {
+    "correlationId": "2ac3493c-dc1f-4807-82b7-8556e75e1e3e",
+    "debugSetting": null,
+    "dependencies": [],
+    "duration": "PT21.6856803S",
+    "mode": "Incremental",
+    "onErrorDeployment": null,
+    "outputResources": [
+      {
+        "id": "/subscriptions/1d87de0e-3b71-4fc5-b14f-d7076ad719f3/resourceGroups/helm/providers/Microsoft.Storage/storageAccounts/wneocroyar4m4storage",
+        "resourceGroup": "helm"
+      }
+    ],
+    "outputs": {},
+    "parameters": {
+      "accessTier": {
+        "type": "String",
+        "value": "Hot"
+      },
+      "accountType": {
+        "type": "String",
+        "value": "Standard_LRS"
+      },
+      "kind": {
+        "type": "String",
+        "value": "StorageV2"
+      },
+      "location": {
+        "type": "String",
+        "value": "westus"
+      },
+      "supportsHttpsTrafficOnly": {
+        "type": "Bool",
+        "value": true
+      }
+    },
+    "parametersLink": null,
+    "providers": [
+      {
+        "id": null,
+        "namespace": "Microsoft.Storage",
+        "registrationPolicy": null,
+        "registrationState": null,
+        "resourceTypes": [
+          {
+            "aliases": null,
+            "apiVersions": null,
+            "capabilities": null,
+            "locations": [
+              "westus"
+            ],
+            "properties": null,
+            "resourceType": "storageAccounts"
+          }
+        ]
+      }
+    ],
+    "provisioningState": "Succeeded",
+    "template": null,
+    "templateHash": "14194993164762120570",
+    "templateLink": null,
+    "timestamp": "2020-01-30T03:32:09.163531+00:00"
+  },
+  "resourceGroup": "helm",
+  "type": "Microsoft.Resources/deployments"
+}
+[root@helm arm_template]#
+
