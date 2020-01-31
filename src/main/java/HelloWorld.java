@@ -8,6 +8,6 @@ public class HelloWorld implements SparkApplication {
 
 	@Override
 	public void init() {
-		get("/", (req, res) -> " WELCOME to devopsarea v-1.0 - Demo by Shivangi Gupta ");
+		get("/", (req, res) -> " WELCOME to devopsarea v-1.0  - Demo by Shivangi Gupta ");
 	}
 }
