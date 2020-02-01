@@ -31,9 +31,17 @@ pipeline {
         }
         stage('docker run') {
                 steps {
-                        sh "docker run -d -p 10.0.0.4:8080:8080 $registry/sgupt26/devopsshivangi:$BUILD_NUMBER"
+                        sh "docker run -d -p 10.0.0.4:9090:8080 $registry/sgupt26/devopsshivangi:$BUILD_NUMBER"
                 }
         }
+        stage('Run inside container') {
+                steps {
+                        withDockerContainer('$registry/sgupt26/devopsshivangi:$BUILD_NUMBER') {
+                        sh 'echo "hi , I am from within container"'
+                        sh 'ls -ltr /usr/local/tomcat/webapps/devopsarea-1.0.war'
+                                                                                             }
+                         }
+            }
         }
 }
 
