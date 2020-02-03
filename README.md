@@ -19,4 +19,7 @@ Make sure ports are open in azure portal , also add port to firewall/iptables if
 http://<server public ip>:8000/devopsarea-1.0/
   
 Detailed steps for tools setup and installation  -
-Please refer attached excel - Assessment_status_ShivangiGupta.xlsx file 
+
+1) Please refer attached excel - Assessment_status_ShivangiGupta.xlsx file ( https://github.com/shivver83/DevOps_Demo_Shivangi/blob/master/Assessment_status_ShivangiGupta.xlsx) 
+
+2) Download excel and refer attached documents for individual activity .
