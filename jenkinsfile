@@ -9,7 +9,10 @@ pipeline {
         stage('clonerepo') { // for display purposes
                 steps{
                 sh "sudo su - root"
-                sh "rm -rf /var/lib/jenkins/workspace/Demo_job/DevOps_Demo_Shivangi;git clone https://github.com/shivver83/DevOps_Demo_Shivangi.git/; cd DevOps_Demo_Shivangi; cp Dockerfile /var/lib/jenkins/workspace/Demo_job"
+                sh "rm -rf /var/lib/jenkins/workspace/Demo_job/DevOps_Demo_Shivangi"
+                sh "git clone https://github.com/shivver83/DevOps_Demo_Shivangi.git/"
+                sh "cd DevOps_Demo_Shivangi"
+                sh "cp Dockerfile /var/lib/jenkins/workspace/Demo_job"
                 }
         }
         stage('Buildingimage') { // for display purposes
