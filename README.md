@@ -1,30 +1,19 @@
- # DevOpsArea Sample Java App -example
+### Steps to update code , build image , push it to repository , run image on server 
+1) Clone repo on server –
+git clone https://github.com/shivver83/DevOps_Demo_Shivangi.git
 
-Build war with maven and DevOpsArea framework
+2) Update HelloWorld.java
+cd DevOps_Demo_Shivangi/src/main/java
 
-Steps are the following:
+3) cd to DevOps_Demo_Shivangi directory( as dockerfile resides at this path)  and run –
+docker build -t sgupt26/devopsshivangi:act12 .
 
-1. Clone the repository to your local machine
-2. The Dockerfile will do:
+4) Run image sgupt26/devopsshivangi: act12  with command –
+docker run -d -p 10.0.0.4:8000:8080  sgupt26/devopsshivangi:act12
+Here app is running on 8080 port inside container , on host it will be accessible on 8000 port .
+Make sure ports are open in azure portal , also add port to firewall/iptables if needed.
 
-   A. Create maven container <br />
-        
-     * copy pom.xml to /tmp <br />
-     * copy folder "src" to /tmp/src <br />
-     * Go to /tmp folder then run "mvn package"<br />
-      
-      The previos command will generate devopsarea-01.war<br />
-        
-   B. Create tomcat container<br />
-        
-     * Will move the file devopsarea-01.war from maven container to /webapp in tomcat contaner<br />
-     * Do health check to make sure that the artifact is deployed
+5) See if container running on desired port – 8000
 
-3. Run 'docker build -t devopsarea .' <br />
-    
-     * Will create a Docker image called devopsarea <br />
-
-4. Run 'docker run -d -p 8080:8080 --name devopsarea-sample-java-app devopsarea' <br />
-     * Will create a container called devopsarea-sample-java-app and will forward the container internal port 8080 to locathost 8080 in the hosted machine 
-
-5. Open [http://localhost:8080/devopsarea-1.0/](http://localhost:8080/devopsarea-1.0/) in your browser and see the result.
+6) Validate , changes made in HelloWorld.java  are visible in browser with new image on 8000 port 
+http://<server public ip>:8000/devopsarea-1.0/
