@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: devopsshivangi
+  name: devopsshivangi-act12
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: devopsshivangi
+      app: devopsshivangi-act12
   template:
     metadata:
       labels:
-        app: devopsshivangi
+        app: devopsshivangi-act12
     spec:
       nodeSelector:
         "beta.kubernetes.io/os": linux
       containers:
       - name: devopsshivangi
-        image: sgupt26/devopsshivangi:4
+        image: sgupt26/devopsshivangi:act12
         ports:
         - containerPort: 8080
           name: devopsshivangi
@@ -24,11 +24,11 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: devopsshivangi
+  name: devopsshivangi-act12
 spec:
   type: LoadBalancer
   selector:
-    app: devopsshivangi
+    app: devopsshivangi-act12
   ports:
   - protocol: TCP
     port: 8080
