@@ -17,3 +17,6 @@ Make sure ports are open in azure portal , also add port to firewall/iptables if
 
 6) Validate , changes made in HelloWorld.java  are visible in browser with new image on 8000 port 
 http://<server public ip>:8000/devopsarea-1.0/
+  
+Detailed steps for tools setup and installation  -
+Please refer attached excel - Assessment_status_ShivangiGupta.xlsx file 
